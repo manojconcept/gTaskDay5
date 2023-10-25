@@ -63,8 +63,29 @@ let getData = {
     "publications": []
   }
   
-  let getInfoData = (getObj) => ({
-        for(let I in getObj){
-            
-        }
-  })
+//Using for Loop:
+for(let key in getData) {
+    console.log(`Key: ${key}, Value: ${getData[key]}`);
+}
+//Using for in Loop:
+for(let key in getData) {
+    if (getData.hasOwnProperty(key)) {
+        console.log(`Key: ${key}, Value: ${getData[key]}`);
+    }
+}
+//Using for of Loop (for Arrays):
+for(let item of getData.education) {
+    console.log(`Education: ${item.degree} at ${item.university}, Graduated in ${item.graduation_year}`);
+}
+
+for(let item of getData.skills) {
+    console.log(`Skill: ${item}`);
+}
+//Using forEach (for Arrays):
+getData.education.forEach(item => {
+    console.log(`Education: ${item.degree} at ${item.university}, Graduated in ${item.graduation_year}`);
+});
+
+getData.skills.forEach(item => {
+    console.log(`Skill: ${item}`);
+});

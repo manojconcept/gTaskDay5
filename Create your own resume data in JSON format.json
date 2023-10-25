@@ -1,5 +1,4 @@
-//Create your own resume data in JSON format
-let getData = {
+{
     "name": "John Doe",
     "title": "Software Engineer",
     "contact": {
